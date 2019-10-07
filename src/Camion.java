@@ -13,5 +13,4 @@ public class Camion {
 	public ArrayList<Animal> loadCamion(){
 		return 0;
 	}
-	
 }

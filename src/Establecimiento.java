@@ -39,12 +39,12 @@ public class Establecimiento extends ElementoSistemaGanadero {
 
 	public double promedioPeso() {
 		double peso = 0;
-		int aux=0;
+		int cantidad=0;
 		for (ElementoSistemaGanadero i : establecimientos) {
 			  peso = peso + i.pesoTotal();
-			  aux = aux + i.cantidadAnimales();
+			  cantidad= cantidad + i.cantidadAnimales();
 			}
-		return peso/aux;		
+		return peso/cantidad;		
 	}
 
 	public int edadTotal() {
@@ -54,9 +54,21 @@ public class Establecimiento extends ElementoSistemaGanadero {
 		}
 		return edad;
 	}
+	public boolean esVendible(Condicion condicion){	
+		boolean vendible = true; //Si no tengo vacas???
+		for (ElementoSistemaGanadero i : establecimientos){
+			if (vendible = true){
+				vendible = i.esVendible(condicion);
+			}	
+			else{
+				return false;
+			}
+		}
+		return vendible;
+	}
 	
-	public boolean esVendible(){
-		return false; //implementalo caldo de mierda
+	public boolean esVendible (Condicion condicion){
+		return condicion.seCumple(this);
 	}
 }
 

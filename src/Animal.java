@@ -68,5 +68,9 @@ public class Animal extends ElementoSistemaGanadero {
 	public int edadTotal() {
 		return this.edad;
 	}
+
+	public  boolean esVendible(Condicion condicion) {
+		return condicion.seCumple(this);
+	}
 }
 
