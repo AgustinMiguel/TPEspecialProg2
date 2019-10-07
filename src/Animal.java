@@ -74,7 +74,8 @@ public class Animal extends ElementoSistemaGanadero {
 	}
 
 	public  boolean esVendible(Condicion condicion) {
-		return condicion.seCumple(this);
+		//return condicion.seCumple(this);
+		return true;
 	}
 }
 

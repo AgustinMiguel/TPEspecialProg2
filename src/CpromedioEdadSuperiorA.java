@@ -1,5 +1,5 @@
 
-public class CpromedioEdadSuperiorA {
+public class CpromedioEdadSuperiorA extends Condicion {
 	private Establecimiento establecimiento;
 	private int edad;
 	public CpromedioEdadSuperiorA(Establecimiento e, int e1){

@@ -10,7 +10,7 @@ public class Camion {
 		this.condicion = condicion;
 	}
 	
-	public ArrayList<Animal> loadCamion(){
-		return 0;
-	}
+//	public ArrayList<Animal> loadCamion(){
+//		return 0;
+//	}
 }

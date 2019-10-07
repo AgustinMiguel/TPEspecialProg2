@@ -54,21 +54,22 @@ public class Establecimiento extends ElementoSistemaGanadero {
 		}
 		return edad;
 	}
-	public boolean esVendible(Condicion condicion){	
-		boolean vendible = true; //Si no tengo vacas???
-		for (ElementoSistemaGanadero i : establecimientos){
-			if (vendible = true){
-				vendible = i.esVendible(condicion);
-			}	
-			else{
-				return false;
-			}
-		}
-		return vendible;
-	}
+//	public boolean esVendible(Condicion condicion){	
+//		boolean vendible = true; //Si no tengo vacas???
+//		for (ElementoSistemaGanadero i : establecimientos){
+//			if (vendible = true){
+//				vendible = i.esVendible(condicion);
+//			}	
+//			else{
+//				return false;
+//			}
+//		}
+//		return vendible;
+//	}
 	
 	public boolean esVendible (Condicion condicion){
-		return condicion.seCumple(this);
+		//return condicion.seCumple(this);
+		return true;
 	}
 }
 
