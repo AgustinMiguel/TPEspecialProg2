@@ -16,8 +16,9 @@ public class Main {
 		Establecimiento e = new Establecimiento( "asd");
 		e.add(v1);
 		e.add(e1);
-		Condicion c = new CpesoSuperiorA(v, 101000);
-		Condicion c1 = new CpromedioEdadSuperiorA(e1, 50);
+		Condicion c = new CpesoSuperiorA(v, 1);
+		Condicion c1 = new CpromedioEdadSuperiorA(e1, 1);
+		Condicion c2 = new CondicionCompuestaAnd(c, c1);
 		System.out.println(e.cantidadAnimales());
 		System.out.println(e.edadTotal());
 		System.out.println(e.pesoTotal());
@@ -25,6 +26,7 @@ public class Main {
 		System.out.println(e.promedioPeso());
 		System.out.println(c.seCumple());
 		System.out.println(c1.seCumple());
+		System.out.println(c2.seCumple());
 	
 	}
 
