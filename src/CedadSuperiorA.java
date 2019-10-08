@@ -1,13 +1,10 @@
-public class CedadSuperiorA extends Condicion{
-	private Animal animal;
+public class CedadSuperiorA extends CondicionPorVaca{
 	private int edad;
-	public CedadSuperiorA(Animal a, int e){
-		animal = a;
+	public CedadSuperiorA( int e){
 		edad = e;
 	}
-	@Override
-	public boolean seCumple() {
-		return animal.getEdad() > edad;
+	public boolean seCumple(Animal vaca) {
+		return vaca.getEdad() > edad;
 	}
 	
 

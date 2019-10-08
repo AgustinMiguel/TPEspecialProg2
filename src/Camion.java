@@ -2,15 +2,17 @@ import java.util.ArrayList;
 public class Camion {
 	protected int capacidad;
 	protected ArrayList<Animal> carga;
-	protected Condicion condicion;
+	protected CondicionPorVaca condicion;
 	
-	public Camion(int capacidad, ArrayList<Animal> carga, Condicion condicion) {
+	public Camion(int capacidad, CondicionPorVaca condicion) {
 		this.capacidad = capacidad;
-		this.carga = carga;
 		this.condicion = condicion;
 	}
-	
-//	public ArrayList<Animal> loadCamion(){
-//		return 0;
-//	}
+	public void cargarCamion (Establecimiento establecimiento){
+		ArrayList<Animal> aux = new ArrayList<Animal>();
+		aux = establecimiento.buscarAnimal(condicion);
+		//establecimiento.borrar(condicion);
+		carga = aux;
+	}
 }
+

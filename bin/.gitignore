@@ -1,13 +1,3 @@
-/Animal.class
-/Camion.class
-/Condicion.class
-/CondicionCompuestaOr.class
-/CondicionRazaIgualA.class
-/CpromedioEdadSuperiorA.class
-/CpromedioPesoSuperiorA.class
-/ElementoSistemaGanadero.class
-/Establecimiento.class
-/Main.class
-/CpesoSuperiorA.class
-/CedadSuperiorA.class
+/CondicionCompuestaAndGrupo.class
 /CondicionCompuestaAnd.class
+/CondicionCompuestaAndPorGrupo.class

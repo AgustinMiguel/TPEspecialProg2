@@ -1,4 +1,7 @@
 
+import Condicion;
+
+
 public class CpesoSuperiorA extends Condicion {
 	private Animal animal;
 	private double peso;

@@ -1,7 +1,9 @@
+import java.util.ArrayList;
+
 
 public abstract class ElementoSistemaGanadero {
 	public abstract int cantidadAnimales();
 	public abstract double pesoTotal();
 	public abstract int edadTotal();
-	public abstract boolean esVendible(Condicion condicion);
+	public abstract ArrayList<Animal> buscarAnimal(CondicionPorVaca condicion);
 }

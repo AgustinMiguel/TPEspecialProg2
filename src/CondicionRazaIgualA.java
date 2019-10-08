@@ -1,3 +1,5 @@
+
+
 public class CondicionRazaIgualA {
 	private Animal animal;
 	private String raza;

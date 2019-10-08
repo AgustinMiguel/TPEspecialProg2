@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 
 public class Animal extends ElementoSistemaGanadero {
 	protected int id;
@@ -72,10 +74,13 @@ public class Animal extends ElementoSistemaGanadero {
 	public int edadTotal() {
 		return this.edad;
 	}
-
-	public  boolean esVendible(Condicion condicion) {
-		//return condicion.seCumple(this);
-		return true;
+	public ArrayList<Animal> buscarAnimal(CondicionPorVaca condicion) {
+		ArrayList<Animal> aux = new ArrayList<Animal>();
+		if (condicion.seCumple(this)){
+			aux.add(this);
+		}
+		return aux;
 	}
+
 }
 

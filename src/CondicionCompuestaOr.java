@@ -1,5 +1,8 @@
 
-public class CondicionCompuestaOr extends Condicion {
+import Condicion;
+
+
+public class CondicionCompuestaOr{
 	private Condicion c;
 	private Condicion c1;
 	public CondicionCompuestaOr(Condicion c, Condicion c1){

@@ -6,7 +6,7 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		ArrayList<ElementoSistemaGanadero> establecimientos = new ArrayList<ElementoSistemaGanadero>();
-		Animal v = new Animal(0, 40, false, 0, 'm', 20, "raza");
+		Animal v = new Animal(0, 0, false, 0, 'm', 20, "raza");
 		Animal v1 = new Animal(0, 20, false, 0, 'm', 30, "raza");
 		Animal v2 = new Animal(0, 20, false, 0, 'm', 30, "raza");
 		establecimientos.add(v);

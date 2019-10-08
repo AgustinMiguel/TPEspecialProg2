@@ -1,13 +1,13 @@
 
-public class CpromedioEdadSuperiorA extends Condicion {
-	private Establecimiento establecimiento;
+
+
+public class CpromedioEdadSuperiorA extends CondicionPorGrupo {
 	private int edad;
-	public CpromedioEdadSuperiorA(Establecimiento e, int e1){
-		establecimiento = e;
+	public CpromedioEdadSuperiorA(int e1){
 		edad = e1;
 	}
 	
-	public boolean seCumple() {
+	public boolean seCumple(Establecimiento establecimiento) {
 		return establecimiento.promedioEdad() > edad;
 	}
 

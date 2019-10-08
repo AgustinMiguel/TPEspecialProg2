@@ -1,13 +1,13 @@
 
-public class CpromedioPesoSuperiorA extends Condicion {
-	private Establecimiento establecimiento;
+
+
+public class CpromedioPesoSuperiorA extends CondicionPorGrupo {
 	private int peso;
-	public CpromedioPesoSuperiorA(Establecimiento e, int p){
-		establecimiento = e;
+	public CpromedioPesoSuperiorA(int p){
 		peso = p;
 	}
 	
-	public boolean seCumple() {
+	public boolean seCumple(Establecimiento establecimiento) {
 		return establecimiento.promedioPeso() > peso;
 	}
 
