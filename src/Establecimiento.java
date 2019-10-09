@@ -69,7 +69,7 @@ public class Establecimiento extends ElementoSistemaGanadero {
 
 	public void borrarAnimal(CondicionPorVaca condicion) {
 		ArrayList<Animal> aux = buscarAnimal(condicion);
-			establecimientos.removeAll(aux);
+			establecimientos.removeAll(aux); //preguntar si esta bien implementado
 	}
 }
 
