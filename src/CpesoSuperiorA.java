@@ -1,15 +1,10 @@
 
-import Condicion;
-
-
-public class CpesoSuperiorA extends Condicion {
-	private Animal animal;
+public class CpesoSuperiorA extends CondicionPorVaca{
 	private double peso;
-	public CpesoSuperiorA(Animal a, double p){
-		animal = a;
+	public CpesoSuperiorA(double p){
 		peso = p;
 	}
-	public boolean seCumple() {
+	public boolean seCumple(Animal animal) {
 		return animal.getPeso() > peso;
 		
 	}

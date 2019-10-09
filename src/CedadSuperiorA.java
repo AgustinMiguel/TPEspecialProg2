@@ -3,8 +3,8 @@ public class CedadSuperiorA extends CondicionPorVaca{
 	public CedadSuperiorA( int e){
 		edad = e;
 	}
-	public boolean seCumple(Animal vaca) {
-		return vaca.getEdad() > edad;
+	public boolean seCumple(Animal animal) {
+		return animal.getEdad() > edad;
 	}
 	
 

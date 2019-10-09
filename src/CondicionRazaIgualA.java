@@ -1,14 +1,12 @@
 
 
-public class CondicionRazaIgualA {
-	private Animal animal;
+public class CondicionRazaIgualA extends CondicionPorVaca{
 	private String raza;
-	public CondicionRazaIgualA(Animal a, String r){
-		animal = a;
+	public CondicionRazaIgualA(String r){
 		raza = r;
 	}
 	
-	public boolean seCumple() {
+	public boolean seCumple(Animal animal) {
 		return animal.getRaza().equals(raza);
 	}
 

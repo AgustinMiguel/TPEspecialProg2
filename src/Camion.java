@@ -11,7 +11,7 @@ public class Camion {
 	public void cargarCamion (Establecimiento establecimiento){
 		ArrayList<Animal> aux = new ArrayList<Animal>();
 		aux = establecimiento.buscarAnimal(condicion);
-		//establecimiento.borrar(condicion);
+		establecimiento.borrarAnimal(condicion);
 		carga = aux;
 	}
 }
