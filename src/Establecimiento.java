@@ -3,7 +3,6 @@ public class Establecimiento extends ElementoSistemaGanadero {
 	protected String nombre;
 	protected ArrayList<ElementoSistemaGanadero> establecimientos;
 	public Establecimiento(String nombre) {
-		super();
 		this.nombre = nombre;
 		this.establecimientos = new ArrayList<ElementoSistemaGanadero>();
 	}
@@ -21,12 +20,12 @@ public class Establecimiento extends ElementoSistemaGanadero {
 
 	public double promedioEdad() {
 		int edad = 0;
-		int aux=0;
+		int cantidad=0;
 		for (ElementoSistemaGanadero i : establecimientos) {
 			  edad = edad + i.edadTotal();
-			  aux = aux + i.cantidadAnimales();
+			  cantidad = cantidad + i.cantidadAnimales();
 			}
-		return edad/aux;
+		return edad/cantidad;
 	}
 
 	public double pesoTotal() {
@@ -60,16 +59,15 @@ public class Establecimiento extends ElementoSistemaGanadero {
 	}
 	
 	public ArrayList<Animal> buscarAnimal(CondicionPorVaca condicion){
-		ArrayList<Animal> aux = new ArrayList<Animal>();
+		ArrayList<Animal> animales = new ArrayList<Animal>();
 		for (ElementoSistemaGanadero i : establecimientos){
-			 aux.addAll(i.buscarAnimal(condicion));
+			animales.addAll(i.buscarAnimal(condicion));
 		}
-		return aux;
+		return animales;
 	}
 
-	public void borrarAnimal(CondicionPorVaca condicion) {
-		ArrayList<Animal> aux = buscarAnimal(condicion);
-			establecimientos.removeAll(aux); //preguntar si esta bien implementado
+	public void borrarAnimal(ArrayList<Animal> animales) {
+		establecimientos.removeAll(animales); //preguntar si esta bien implementado o hacer un for que recorra array establecimientos haciendo remove de cada animal
 	}
 }
 

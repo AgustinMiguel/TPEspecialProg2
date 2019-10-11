@@ -11,8 +11,15 @@ public class Camion {
 	public void cargarCamion (Establecimiento establecimiento){
 		ArrayList<Animal> aux = new ArrayList<Animal>();
 		aux = establecimiento.buscarAnimal(condicion);
-		establecimiento.borrarAnimal(condicion);
-		carga = aux;
-	}
+		for(Animal i: aux){
+			carga.add(i);
+			capacidad--;
+			if(capacidad == 0){
+				break;
+			}
+		}
+		establecimiento.borrarAnimal(carga);
+	} //pasar metodo a establecimiento?
+	//preguntar como hacerlo mas lindo
 }
 

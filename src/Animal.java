@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 
 public class Animal extends ElementoSistemaGanadero {
-	protected int id;
+	static private int id = 0;
 	protected double peso;
 	protected boolean castrada;
 	protected int hijos;
@@ -10,15 +10,14 @@ public class Animal extends ElementoSistemaGanadero {
 	protected int edad; //en meses
 	protected String raza;
 
-	public Animal(int id, double peso, boolean castrada, int hijos, char sexo,int edad, String raza) {
-		super();
-		this.id = id;
+	public Animal(double peso, boolean castrada, int hijos, char sexo,int edad, String raza) {
 		this.peso = peso;
 		this.castrada = castrada;
 		this.hijos = hijos;
 		this.sexo = sexo;
 		this.edad = edad;
 		this.raza = raza;
+		id++;
 	}
 	public String getRaza(){
 		return this.raza;
@@ -75,11 +74,11 @@ public class Animal extends ElementoSistemaGanadero {
 		return this.edad;
 	}
 	public ArrayList<Animal> buscarAnimal(CondicionPorVaca condicion) {
-		ArrayList<Animal> aux = new ArrayList<Animal>();
-		if (condicion.seCumple(this)){
-			aux.add(this);
+		ArrayList<Animal> animales = new ArrayList<Animal>();
+			if (condicion.seCumple(this)){
+				animales.add(this);
 		}
-		return aux;
+		return animales;
 	}
 
 }
