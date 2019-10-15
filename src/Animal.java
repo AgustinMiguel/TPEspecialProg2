@@ -1,6 +1,4 @@
 import java.util.ArrayList;
-
-
 public class Animal extends ElementoSistemaGanadero {
 	static private int id = 0;
 	protected double peso;
@@ -79,6 +77,18 @@ public class Animal extends ElementoSistemaGanadero {
 				animales.add(this);
 		}
 		return animales;
+	}
+	public boolean equals(Animal animal){   //Supongo que solo con el ID alcanza para diferenciar dos animales
+		if (animal.id == this.id){
+			return true;
+		}
+		return false;
+	}
+	public Animal buscarAnimal(Animal animal) {
+		if (animal.equals(this)){
+			return this;
+		}
+	return null;
 	}
 
 }

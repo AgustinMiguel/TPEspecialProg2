@@ -65,9 +65,21 @@ public class Establecimiento extends ElementoSistemaGanadero {
 		}
 		return animales;
 	}
-
+	public Animal buscarAnimal(Animal animal) {
+		Animal aux = null;
+		for (ElementoSistemaGanadero i : establecimientos){
+			aux = buscarAnimal(animal);
+		}
+		return aux;
+	}
 	public void borrarAnimal(ArrayList<Animal> animales) {
-		establecimientos.removeAll(animales); //preguntar si esta bien implementado o hacer un for que recorra array establecimientos haciendo remove de cada animal
+		Animal animal = null;
+		for (Animal i : animales){
+			animal = buscarAnimal(i);
+			if (animal != null){
+				establecimientos.remove(animal);
+			}
+		}	
 	}
 }
 
