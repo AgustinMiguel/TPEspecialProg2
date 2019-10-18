@@ -68,7 +68,7 @@ public class Establecimiento extends ElementoSistemaGanadero {
 	public Animal buscarAnimal(Animal animal) {
 		Animal aux = null;
 		for (ElementoSistemaGanadero i : establecimientos){
-			aux = buscarAnimal(animal);
+			aux = i.buscarAnimal(animal);
 		}
 		return aux;
 	}
@@ -80,6 +80,12 @@ public class Establecimiento extends ElementoSistemaGanadero {
 				establecimientos.remove(animal);
 			}
 		}	
+		imprimir();
+	}
+	public void imprimir(){
+		for(int i = 0; i < establecimientos.size(); i++){
+			System.out.println(establecimientos.get(i).cantidadAnimales());
+		}
 	}
 }
 
