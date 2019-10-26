@@ -7,6 +7,7 @@ public class Camion {
 	public Camion(int capacidad, CondicionPorVaca condicion) {
 		this.capacidad = capacidad;
 		this.condicion = condicion;
+		this.carga = new ArrayList<Animal>();
 	}
 	public void cargarCamion (Establecimiento establecimiento){
 		ArrayList<Animal> aux = new ArrayList<Animal>();
