@@ -7,9 +7,16 @@ public abstract class ElementoSistemaGanadero {
 	public abstract ArrayList<Animal> buscarAnimal(CondicionPorVaca condicion);
 	public abstract Animal buscarAnimal (Animal animal);
 	public double promedioEdad(){
-		return this.edadTotal()/this.cantidadAnimales();
+		if (this.cantidadAnimales()!=0){
+			return this.edadTotal()/this.cantidadAnimales();
+		}
+		return 0;
 	}
 	public double promedioPeso(){
-		return this.pesoTotal()/this.cantidadAnimales();
+		if (this.cantidadAnimales()!=0){
+			return this.pesoTotal()/this.cantidadAnimales();
+		}
+		return 0;
 	}
+	
 }

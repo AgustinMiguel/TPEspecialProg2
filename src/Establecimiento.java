@@ -21,16 +21,20 @@ public class Establecimiento extends ElementoSistemaGanadero {
 
 	public double pesoTotal() {
 		double peso=0;
-		for (ElementoSistemaGanadero i : establecimientos) {
-			  peso = peso+i.pesoTotal();
+		if (establecimientos != null){
+			for (ElementoSistemaGanadero i : establecimientos) {
+				peso = peso+i.pesoTotal();
 			}
+		}
 		return peso;
 	}
 
 	public int edadTotal() {
 		int edad = 0;
-		for (ElementoSistemaGanadero i : establecimientos){
-			edad = edad + i.edadTotal();
+		if(establecimientos != null){
+			for (ElementoSistemaGanadero i : establecimientos){
+				edad = edad + i.edadTotal();
+			}
 		}
 		return edad;
 	}
