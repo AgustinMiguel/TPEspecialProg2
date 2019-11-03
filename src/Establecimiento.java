@@ -18,15 +18,6 @@ public class Establecimiento extends ElementoSistemaGanadero {
 		return suma;
 	}
 
-	public double promedioEdad() {
-		int edad = 0;
-		int cantidad=0;
-		for (ElementoSistemaGanadero i : establecimientos) {
-			  edad = edad + i.edadTotal();
-			  cantidad = cantidad + i.cantidadAnimales();
-			}
-		return edad/cantidad;
-	}
 
 	public double pesoTotal() {
 		double peso=0;
@@ -34,16 +25,6 @@ public class Establecimiento extends ElementoSistemaGanadero {
 			  peso = peso+i.pesoTotal();
 			}
 		return peso;
-	}
-
-	public double promedioPeso() {
-		double peso = 0;
-		int cantidad=0;
-		for (ElementoSistemaGanadero i : establecimientos) {
-			  peso = peso + i.pesoTotal();
-			  cantidad= cantidad + i.cantidadAnimales();
-			}
-		return peso/cantidad;		
 	}
 
 	public int edadTotal() {

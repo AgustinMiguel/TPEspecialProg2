@@ -7,6 +7,7 @@ public class Animal extends ElementoSistemaGanadero {
 	protected char sexo;
 	protected int edad; //en meses
 	protected String raza;
+	protected int Id;
 
 	public Animal(double peso, boolean castrada, int hijos, char sexo,int edad, String raza) {
 		this.peso = peso;
@@ -15,6 +16,7 @@ public class Animal extends ElementoSistemaGanadero {
 		this.sexo = sexo;
 		this.edad = edad;
 		this.raza = raza;
+		this.Id=id;
 		id++;
 	}
 	public String getRaza(){
