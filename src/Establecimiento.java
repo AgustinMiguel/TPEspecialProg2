@@ -1,7 +1,8 @@
 import java.util.ArrayList;
+import java.util.List;
 public class Establecimiento extends ElementoSistemaGanadero {
 	protected String nombre;
-	protected ArrayList<ElementoSistemaGanadero> establecimientos;
+	protected List<ElementoSistemaGanadero> establecimientos;
 	public Establecimiento(String nombre) {
 		this.nombre = nombre;
 		this.establecimientos = new ArrayList<ElementoSistemaGanadero>();
@@ -50,6 +51,7 @@ public class Establecimiento extends ElementoSistemaGanadero {
 		}
 		return animales;
 	}
+	
 	public Animal buscarAnimal(Animal animal) {
 		Animal aux = null;
 		for (ElementoSistemaGanadero i : establecimientos){
@@ -57,16 +59,16 @@ public class Establecimiento extends ElementoSistemaGanadero {
 		}
 		return aux;
 	}
-	public void borrarAnimal(ArrayList<Animal> animales) {
-		Animal animal = null;
-		for (Animal i : animales){
-			animal = buscarAnimal(i);
-			if (animal != null){
-				establecimientos.remove(animal);
+	public boolean borrarAnimal(Animal a) {
+		boolean loBorro = establecimientos.remove(a);
+		if (!loBorro){
+			for (int i =0; i<establecimientos.size() && !loBorro;i++){
+				loBorro = establecimientos.get(i).borrarAnimal(a);
 			}
-		}	
-		imprimir();
+		}
+		return loBorro;
 	}
+	
 	public void imprimir(){
 		for(int i = 0; i < establecimientos.size(); i++){
 			System.out.println(establecimientos.get(i).cantidadAnimales());

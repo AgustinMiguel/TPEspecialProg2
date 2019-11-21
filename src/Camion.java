@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 public class Camion {
 	protected int capacidad;
 	protected ArrayList<Animal> carga;
@@ -10,22 +11,13 @@ public class Camion {
 		this.carga = new ArrayList<Animal>();
 	}
 	public void cargarCamion (Establecimiento establecimiento){
-		ArrayList<Animal> aux = new ArrayList<Animal>();
+		List<Animal> aux = new ArrayList<Animal>();
 		aux = establecimiento.buscarAnimal(condicion);	
-		establecimiento.borrarAnimal(aux);
-//		for(int j = 0; j < aux.size(); j++){
-//			System.out.println(aux.get(j).getEdad());
-//		}
-		for(Animal i: aux){				//podria ser un while
-			carga.add(i);
-			capacidad--;
-			if(capacidad == 0){
-				break;
-			}
-			
+		aux= aux.subList(0, capacidad-1);
+		for(Animal a: aux){				//podria ser un while
+			carga.add(a);
+			establecimiento.borrarAnimal(a);
 		}
-
-		establecimiento.borrarAnimal(carga);
 	}
 }
 

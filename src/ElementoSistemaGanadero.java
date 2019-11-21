@@ -18,5 +18,5 @@ public abstract class ElementoSistemaGanadero {
 		}
 		return 0;
 	}
-	
+	public abstract boolean borrarAnimal(Animal a);
 }

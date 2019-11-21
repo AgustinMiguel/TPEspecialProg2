@@ -92,6 +92,10 @@ public class Animal extends ElementoSistemaGanadero {
 		}
 	return null;
 	}
+	
+	public boolean borrarAnimal(Animal a) {
+		return false;
+	}
 
 }
 
