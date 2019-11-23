@@ -7,7 +7,7 @@ public class Sistema {
 	}
 	public void add(Etiqueta e) {
 		etiquetas.add(e);
-	
+	}
 	public void seCumple(Animal v){
 		for(Etiqueta e: etiquetas){
 			if(e.condicion.seCumple(v)){
